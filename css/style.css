@@ -47,3 +47,81 @@ img {
   height: auto;
   display: block;
 }
+
+/* ==========================================================================
+   Rozvržení pro počítač – CSS Grid (Krok 6)
+   ========================================================================== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "sidebar main nav"
+    "footer footer footer";
+  grid-template-columns: 240px 1fr 200px;
+  gap: 1.5rem;
+}
+
+header {
+  grid-area: header;
+  background: linear-gradient(135deg, #1b3b2f 0%, #2f5d49 100%);
+  color: #ffffff;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  border-radius: 8px;
+}
+
+header h1 {
+  color: #ffffff;
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.5px;
+}
+
+header .slogan {
+  font-size: 1.1rem;
+  color: #d1e3d9;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+
+aside {
+  grid-area: sidebar;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-self: start;
+}
+
+main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+nav {
+  grid-area: nav;
+  align-self: start;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #1b3b2f;
+  color: #e0e7e3;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+footer p + p {
+  margin-top: 0.5rem;
+}
+
+footer .photo-sources {
+  font-size: 0.8rem;
+  color: #a3b8ad;
+}
