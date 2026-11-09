@@ -125,3 +125,188 @@ footer .photo-sources {
   font-size: 0.8rem;
   color: #a3b8ad;
 }
+
+/* ==========================================================================
+   Flexbox v menu a komponentách (Krok 7)
+   ========================================================================== */
+/* Navigace a menu */
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+nav a {
+  display: block;
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  background-color: #ffffff;
+  color: #244b3b;
+  border: 1px solid #d8ded8;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: #244b3b;
+  color: #ffffff;
+  border-color: #244b3b;
+  outline: none;
+}
+
+/* Karta */
+.card {
+  padding: 1.25rem;
+  border: 1px solid #d8ded8;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  background-color: #ffffff;
+}
+
+/* Karty nabídky vedle sebe a stejně široké */
+.offer-list {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.offer-list .card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.price {
+  color: #7d5435;
+  font-weight: 700;
+  font-size: 1.15rem;
+  margin-top: 0.75rem;
+}
+
+/* Bloky v bočním panelu */
+aside > div {
+  background-color: #ffffff;
+  border: 1px solid #d8ded8;
+  border-radius: 8px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+aside h3 {
+  border-bottom: 2px solid #244b3b;
+  padding-bottom: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Provozní doba: den vlevo, čas vpravo */
+.opening-hours ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.opening-hours li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px dashed #d8ded8;
+}
+
+.opening-hours li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.opening-hours .day {
+  font-weight: 500;
+}
+
+.opening-hours .time {
+  color: #555555;
+}
+
+/* Článek o chatě a obrázek s popiskem */
+article figure {
+  margin-top: 1rem;
+  background-color: #ffffff;
+  border: 1px solid #d8ded8;
+  border-radius: 8px;
+  padding: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+article img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+article figcaption {
+  font-size: 0.85rem;
+  color: #666666;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+/* Kontaktní údaje */
+address {
+  font-style: normal;
+  background-color: #ffffff;
+  border: 1px solid #d8ded8;
+  border-radius: 8px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+address a {
+  color: #244b3b;
+  font-weight: 600;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+address a:hover,
+address a:focus {
+  color: #7d5435;
+}
+
+/* ==========================================================================
+   Galerie pomocí CSS Grid (Krok 8)
+   ========================================================================== */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.gallery figure {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border: 1px solid #d8ded8;
+  border-radius: 8px;
+  padding: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.gallery img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.gallery figcaption {
+  font-size: 0.85rem;
+  color: #666666;
+  margin-top: 0.5rem;
+  text-align: center;
+  line-height: 1.4;
+}
