@@ -18,6 +18,28 @@
   --nav-hover-text: #ffffff;
 }
 
+/* tmavy rezim */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-body: #141a16;
+    --bg-surface: #1d2420;
+    --text-main: #e2ede5;
+    --text-muted: #95a399;
+    --color-primary: #81c784;
+    --color-accent: #d98847;
+    --border-color: #2b362f;
+    --card-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    --header-gradient: linear-gradient(135deg, #0e1a14 0%, #173123 100%);
+    --header-text: #e2ede5;
+    --header-slogan: #a9beae;
+    --footer-bg: #0e1a14;
+    --footer-text: #c2d4c7;
+    --footer-muted: #809485;
+    --nav-hover-bg: #81c784;
+    --nav-hover-text: #141a16;
+  }
+}
+
 /* zakladni reset */
 *,
 *::before,
