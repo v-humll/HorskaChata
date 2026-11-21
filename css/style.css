@@ -38,6 +38,15 @@
     --nav-hover-bg: #81c784;
     --nav-hover-text: #141a16;
   }
+
+  img {
+    filter: brightness(0.85);
+    transition: filter 0.3s ease;
+  }
+
+  img:hover {
+    filter: brightness(1);
+  }
 }
 
 /* zakladni reset */
