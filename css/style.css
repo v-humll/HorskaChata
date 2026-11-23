@@ -455,3 +455,95 @@ address a:focus {
     display: none;
   }
 }
+
+
+/* tisk */
+@media print {
+  /* skryti navigace a tipu */
+  nav,
+  .trip-tip {
+    display: none !important;
+  }
+
+  /* cisty podklad a text */
+  *,
+  *::before,
+  *::after {
+    background: transparent !important;
+    color: #000000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 11pt;
+    line-height: 1.4;
+  }
+
+  /* plna sirka */
+  .container {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+  }
+
+  main,
+  aside {
+    display: block !important;
+  }
+
+  header {
+    background: none !important;
+    color: #000000 !important;
+    padding: 1rem 0 !important;
+    border-bottom: 2px solid #000000;
+    margin-bottom: 1.5rem;
+  }
+
+  header h1 {
+    color: #000000 !important;
+    font-size: 1.8rem;
+  }
+
+  header .slogan {
+    color: #333333 !important;
+    font-size: 1rem;
+  }
+
+  footer {
+    background: none !important;
+    color: #555555 !important;
+    padding: 1rem 0 !important;
+    border-top: 1px solid #cccccc;
+    margin-top: 2rem;
+  }
+
+  footer .photo-sources {
+    color: #777777 !important;
+  }
+
+  /* ramecky karet */
+  .card,
+  aside > div,
+  address,
+  article figure,
+  .gallery figure {
+    border: 1px solid #cccccc !important;
+    box-shadow: none !important;
+    background: #ffffff !important;
+    margin-bottom: 1rem;
+  }
+
+  .offer-list {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .price {
+    color: #000000 !important;
+    font-weight: bold;
+  }
+}
