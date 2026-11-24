@@ -456,7 +456,6 @@ address a:focus {
   }
 }
 
-
 /* tisk */
 @media print {
   /* skryti navigace a tipu */
@@ -545,5 +544,41 @@ address a:focus {
   .price {
     color: #000000 !important;
     font-weight: bold;
+  }
+
+  /* vypis url odkazu */
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+    color: #555555;
+  }
+
+  /* zakaz roztrzeni karet */
+  .card,
+  .opening-hours,
+  figure {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* zakaz osamoceni nadpisu */
+  h1,
+  h2,
+  h3 {
+    break-after: avoid;
+    page-break-after: avoid;
+    color: #000000 !important;
+  }
+
+  /* tiskova galerie */
+  .gallery {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 0.5rem !important;
+  }
+
+  .gallery img {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
   }
 }
